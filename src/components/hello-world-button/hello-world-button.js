@@ -1,4 +1,3 @@
-'use strict';
 
 import './hello-world-button.scss';
 
