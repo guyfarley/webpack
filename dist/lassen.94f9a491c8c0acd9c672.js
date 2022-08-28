@@ -1,0 +1,1 @@
+(()=>{"use strict";(new class{render(){const e=document.createElement("h1"),n=document.querySelector("body");e.innerHTML="Webpack is awesome",n.appendChild(e)}}).render(),(new class{render(){const e=document.createElement("img");e.src="552b6a449aece13f1ec1.jpg",e.alt="Lassen",e.classList.add("lassen-image"),document.querySelector("body").appendChild(e)}}).render()})();
