@@ -4,9 +4,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'hello-world': './src/hello-world.js',
+    'lassen': './src/lassen.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist'),
     publicPath: ''
   },
@@ -55,9 +58,18 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      filename: 'hello-world.html',
+      chunks: ['hello-world'],
       title: 'Hello World',
-      template: 'src/index.hbs',
-      description: 'Some description'
+      template: 'src/page-template.hbs',
+      description: 'Hello World'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lassen.html',
+      chunks: ['lassen'],
+      title: 'Lassen',
+      template: 'src/page-template.hbs',
+      description: 'Lassen'
     })
   ]
 };
